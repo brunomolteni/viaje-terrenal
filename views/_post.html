@@ -10,7 +10,29 @@
       <article class="copy" md>
         {{ item.body }}
       </article>
-      <a href="/blog"><h3>Ver todos los artículos</h3></a>
+      <nav>
+        <if condition="item.adjacent.prev">
+          <a href="/blog/{{item.adjacent.prev.slug}}" class="prev">
+            <img src="{{item.adjacent.prev.heroImage.file.url}}" />
+            <div>
+              <h3>{{ item.adjacent.prev.title }}</h3>
+              <time class="tiny">{{ item.adjacent.prev.publishDate }}</time>
+              <p>{{ item.adjacent.prev.description }}</p>
+            </div>
+          </a>
+        </if>
+        <if condition="item.adjacent.next">
+          <a href="/blog/{{item.adjacent.next.slug}}" class="next">
+            <img src="{{item.adjacent.next.heroImage.file.url}}" />
+            <div>
+              <h3>{{ item.adjacent.next.title }}</h3>
+              <time class="tiny">{{ item.adjacent.next.publishDate }}</time>
+              <p>{{ item.adjacent.next.description }}</p>
+            </div>
+          </a>
+        </if>
+      </nav>
+      <a href="/blog">Ver todos los artículos</a>
     </section>
   </block>
 </extends>

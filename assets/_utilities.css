@@ -12,8 +12,7 @@
 @keyframes driveOut {
   0% {
     animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
-    transform: translate3d(0, 0, 0); }
-  60% {
+    transform: translate3d(0, 0, 0);
     opacity: 1; }
   100% {
     opacity: 0;

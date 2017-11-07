@@ -7,8 +7,15 @@ const getImage = (el, data) => {
   return data.includes.Asset.filter(asset => asset.sys.id === el.fields.heroImage.sys.id)[0].fields;
 }
 
+const getPrevAndNext = (i, data) => {
+  let result = {};
+  result.next = (i!== 0) ? Object.assign({},data[i-1]) : false;
+  result.prev = (i!== data.length-1) ? Object.assign({},data[i+1]) : false;
+  return result;
+}
+
 const getPostsWithImagesAndDate = data => {
-  return data.items.map(el => Object.assign( {} , el.fields ,  {heroImage: getImage(el, data) , publishDate: getDate(el.fields.publishDate) }) );
+  return data.items.map((el,i) => Object.assign( {} , el.fields ,  {heroImage: getImage(el, data), publishDate: getDate(el.fields.publishDate)  }) ).map( (el,i,array) => Object.assign( el, {adjacent: getPrevAndNext(i, array)} ) );
 }
 
 function getValidConfig (configEnv, keys) {
