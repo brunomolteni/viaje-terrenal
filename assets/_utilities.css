@@ -1,0 +1,39 @@
+@keyframes driveIn {
+  0% {
+    opacity: 0;
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+    transform: translate3d(70vw, 0, 0); }
+  30% {
+    opacity: 1; }
+  100% {
+    animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+    transform: translate3d(0, 0, 0); }
+}
+@keyframes driveOut {
+  0% {
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+    transform: translate3d(0, 0, 0); }
+  60% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+    transform: translate3d(-50vw, 0, 0); }
+}
+
+.tiny {
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: #A0A0A0;
+}
+
+.going-out{
+  animation-duration: .4s;
+  animation-name: driveOut;
+}
+.going-in{
+  animation-name: driveIn;
+  animation-delay: .4s;
+  animation-duration: .8s;
+}

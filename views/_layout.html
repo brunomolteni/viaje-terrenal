@@ -26,12 +26,14 @@
       <script src='/js/main.js' defer></script>
     </block>
     <script>
-    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-    ga('create', 'UA-107272968-1', 'auto');
-    ga('require', 'urlChangeTracker');
-    ga('require', 'pageVisibilityTracker');
-    ga('require', 'maxScrollTracker');
-    ga('send', 'pageview');
+    if(location.host.split(':')[0]!=='localhost'){
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-107272968-1', 'auto');
+      ga('require', 'urlChangeTracker');
+      ga('require', 'pageVisibilityTracker');
+      ga('require', 'maxScrollTracker');
+      ga('send', 'pageview');
+    }
     </script>
     <script async src='https://www.google-analytics.com/analytics.js'></script>
     <script src='/js/autotrack.js' defer></script>

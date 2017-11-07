@@ -1,5 +1,6 @@
 @import '_reset.css';
-@import '../views/_header.css';
+@import '_utilities.css';
 @import '../views/_layout.css';
+@import '../views/_header.css';
 @import '../views/_post.css';
 @import '../views/index.css';

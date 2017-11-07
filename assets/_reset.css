@@ -1,4 +1,12 @@
-/*! minireset.css v0.0.3 | MIT License | github.com/jgthms/minireset.css */
+@font-face {
+  font-family: "Avenir";
+  font-weight: 400;
+  font-style: normal;
+  src:  url("font/avenir-400.woff2") format("woff2"),
+        url("font/avenir-400.woff") format("woff");
+  font-display: swap;
+}
+
 html,
 body,
 p,
@@ -26,16 +34,6 @@ h6 {
   padding: 0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-size: 100%;
-  font-weight: 600;
-}
-
 ul {
   list-style: none;
 }
@@ -53,4 +51,21 @@ html {
 
 *, *:before, *:after {
   box-sizing: inherit;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+h1 {
+  font-size: 2em;
+}
+h2{
+  font-size: 1.8em;
+}
+h3{
+  font-size: 1.6em;
+}
+h4{
+  font-size: 1.4em;
 }
