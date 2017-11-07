@@ -1,0 +1,83 @@
+.post > img{
+  margin-bottom: 2em;
+}
+
+.post .headline, .post .copy{
+  max-width: 80%;
+  margin: 0 auto 1em;
+}
+
+.post .headline{
+  text-align: center;
+}
+
+.post .headline h1{
+  font-size: 3.5rem;
+  font-size: responsive 1.5rem 3.5rem;
+  font-weight: bold;
+}
+
+.post .copy {
+  font-size: 1.3rem;
+  font-size: responsive 1rem 1.3rem;
+}
+
+.post .copy *:not(div) {
+  margin: 2em 0 2em;
+}
+
+.post .copy h3 {
+  font-size: 1.35em;
+}
+
+.post .copy ul {
+  margin: 0;
+  padding-left: 1em;
+  list-style: disc;
+}
+
+.post .copy li {
+  margin: 0;
+}
+
+.post .copy img{
+  max-width: 100vw;
+  width: 125%;
+  margin-left: -12.5%;
+}
+
+.post .copy blockquote{
+  font-size: 0.9rem;
+  font-size: responsive 0.8rem 0.9rem;
+  text-align: center;
+  margin: -2em 0 0;
+  color: #999;
+}
+
+.post .copy blockquote p{
+  margin: 0;
+}
+@media all and (min-width: 800px){
+  .post .copy .col{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1em 0;
+    width: 125%;
+    margin-left: -12.5%;
+  }
+  .post .copy .col img{
+    flex: 0 1 auto;
+    width: 50%;
+    width:  calc(50% - 1em);
+    margin: 0;
+  }
+  .post .copy .col p:first-child {
+    padding-left: 10%;
+    padding-right: 2em;
+  }
+  .post .copy .col p:last-child {
+    padding-right: 10%;
+    padding-left: 2em;
+  }
+}

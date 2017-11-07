@@ -1,0 +1,29 @@
+<extends src='_layout.html'>
+  <block name='content'>
+    <section class="home">
+      <header>
+        <img src="/img/icon.png"/>
+        <h1>Viaje Terrenal</h1>
+        <p>
+          <q>Un viaje de mil millas comienza con el primer paso.</q>
+          Lao-Tse
+        </p>
+      </header>
+
+      <h2>Blog</h2>
+      <nav>
+        <each loop="post of posts.slice(0,4)">
+      		<a href="/blog/{{post.slug}}">
+            <img src="{{post.heroImage.file.url}}" />
+            <div>
+              <h3>{{ post.title }}</h3>
+              <time class="tiny">{{ post.publishDate }}</time>
+              <p>{{ post.description }}</p>
+            </div>
+          </a>
+      	</each>
+      </nav>
+      <a href="/blog"><h3>Ver todos los artículos</h3></a>
+    </section>
+  </block>
+</extends>

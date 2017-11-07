@@ -1,0 +1,35 @@
+.home header{
+  background-image: linear-gradient(to bottom, white , transparent 90% ), url(img/P6111010bw2.jpg);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  padding: 40px 20px;
+  height: 100vh;
+}
+.home header img{
+  margin: 0 auto;
+  width: auto;
+  max-height: 25vmin;
+}
+.home header h1{
+  font-size: 5rem;
+  font-size: responsive 3rem 5rem;
+  text-align: center;
+  color: #393030;
+}
+.home header q{
+  text-align: center;
+  font-size: 1.6rem;
+  font-size: responsive 1rem 1.5rem;
+  color: white;
+  margin-top: 2em;
+  display: block;
+}
+.home header p{
+  text-align: right;
+  margin: 0 10%;
+  font-weight: 600;
+  color: white;
+  letter-spacing: .1rem;
+  font-size: .9rem;
+}

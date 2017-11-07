@@ -1,0 +1,20 @@
+<extends src='../_layout.html'>
+  <block name='content'>
+    <include src='../_header.html'></include>
+    <section class="blog">
+      <h2>Blog</h2>
+      <nav>
+        <each loop="post of posts">
+      		<a href="/blog/{{post.slug}}">
+            <img src="{{post.heroImage.file.url}}" />
+            <div>
+              <h3>{{ post.title }}</h3>
+              <time class="tiny">{{ post.publishDate }}</time>
+              <p>{{ post.description }}</p>
+            </div>
+          </a>
+      	</each>
+      </nav>
+    </section>
+  </block>
+</extends>

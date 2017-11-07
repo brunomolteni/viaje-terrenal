@@ -1,0 +1,16 @@
+<extends src='_layout.html'>
+  <block name='content'>
+    <include src='_header.html'></include>
+    <section class="post">
+      <img src="{{item.heroImage.file.url}}" class="hero-image"/>
+      <div class="headline">
+        <time class="tiny">{{ item.publishDate }}</time>
+        <h1>{{ item.title }}</h1>
+      </div>
+      <article class="copy" md>
+        {{ item.body }}
+      </article>
+      <a href="/blog"><h3>Ver todos los artículos</h3></a>
+    </section>
+  </block>
+</extends>

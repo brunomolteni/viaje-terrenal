@@ -1,0 +1,28 @@
+.logo-header{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #EBEBEB;
+  text-decoration: none;
+  padding: 1em 0;
+  font-size: 1.2rem;
+  font-size: responsive 1.2rem 2rem;
+}
+.logo-header h2{
+  color: #393030;
+  font-weight: bold;
+  line-height: 1;
+  margin-left: 1.25em;
+  font-size: inherit;
+}
+.logo-header img{
+  width: 1em;
+  position: absolute;
+  left: 0;
+  top: -.2em;
+}
+.logo-header span{
+  position: relative;
+  padding-left: 1.25em;
+}
