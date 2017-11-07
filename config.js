@@ -1,3 +1,16 @@
+const getDate = date => {
+  let D = new Date(date);
+  return `${D.getDate()}/${D.getMonth()+1}/${D.getFullYear()}`;
+}
+
+const getImage = (el, data) => {
+  return data.includes.Asset.filter(asset => asset.sys.id === el.fields.heroImage.sys.id)[0].fields;
+}
+
+const getPostsWithImagesAndDate = data => {
+  return data.items.map(el => Object.assign( {} , el.fields ,  {heroImage: getImage(el, data) , publishDate: getDate(el.fields.publishDate) }) );
+}
+
 function getValidConfig (configEnv, keys) {
   let {config, missingKeys} = keys.reduce((acc, key) => {
     if (!configEnv[key]) {
@@ -22,18 +35,6 @@ function getValidConfig (configEnv, keys) {
   return config
 }
 
-const getDate = date => {
-  let D = new Date(date);
-  return `${D.getDate()}/${D.getMonth()+1}/${D.getFullYear()}`;
-}
-
-const getImage = (el, data) => {
-  return data.includes.Asset.filter(asset => asset.sys.id === el.fields.heroImage.sys.id)[0].fields;
-}
-
-const getPostsWithImagesAndDate = data => {
-  return data.items.map(el => Object.assign( {} , el.fields ,  {heroImage: getImage(el, data) , publishDate: getDate(el.fields.publishDate) }) );
-}
 
 module.exports = {
   getConfigForKeys (keys) {

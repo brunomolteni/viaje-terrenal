@@ -16,6 +16,7 @@ const locals = {};
 module.exports = {
   devtool: 'source-map',
   ignore: ['**/_*', '**/.*', 'views/*.css', 'readme.md', 'package.json', 'yarn.lock'],
+  entry: { 'js/main': ['./assets/js/index.js'], 'js/autotrack': ['./assets/js/autotrack.js'] },
   plugins: [
     new Records({
         addDataTo: locals,
