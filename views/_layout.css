@@ -45,8 +45,8 @@ nav a.prev:before, nav a.next:before{
   text-align: center;
   z-index: 10;
 }
-nav a.prev:before{ content: 'Articulo Anterior' }
-nav a.next:before{ content: 'Articulo Siguiente' }
+nav a.prev:before{ content: 'Artículo Anterior' }
+nav a.next:before{ content: 'Artículo Siguiente' }
 nav a img{
   object-fit: cover;
   width: auto;

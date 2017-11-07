@@ -11,7 +11,7 @@ const c = getConfigForKeys([
   'CTF_SPACE_ID',
   'CTF_CDA_ACCESS_TOKEN',
 ]);
-const locals = {};
+const locals = {production: env === 'production'};
 
 module.exports = {
   devtool: 'source-map',
