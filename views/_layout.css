@@ -90,12 +90,22 @@ nav a div time{
     left: 50%;
     transform: translateX(-50%);
 }
-nav#instafeed a{
-  height: 400px;
+#instafeed a{
+  height: 100vw;
+  margin-bottom: 20px;
 }
 nav#instafeed a img{
   opacity: 1;
 }
+
+@media (min-width: 400px) {
+  #instafeed a{
+    flex-basis: calc(50% - 10px);
+    flex-grow: 0;
+    height: 50vw;
+  }
+}
+
 @media (min-width: 800px) {
   nav a div{
     transform: translateY(100px);
@@ -105,8 +115,13 @@ nav#instafeed a img{
   }
   nav#instafeed a{
     flex-basis: calc(33.3% - 15px);
-    flex-grow: 0;
-    margin-bottom: 20px;
+    height: 33vw;
+  }
+}
+
+@media (min-width: 1200px) {
+  nav#instafeed a{
+    height: 400px;
   }
 }
 
@@ -180,4 +195,5 @@ footer {
 
 .full-width-link svg{
   margin-bottom: -4px;
+  margin-left: 5px;
 }
