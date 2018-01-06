@@ -18,6 +18,7 @@ var AnimatedTransition = Barba.BaseTransition.extend({
       if( !e.target.classList.contains('done') )this.done();
       e.target.classList.add('done');
       FB.XFBML.parse(document.getElementById('barba-wrapper'));
+      if( document.getElementById('instafeed') ) feed.run();
     });
   },
 });
