@@ -8,6 +8,7 @@
   },
   "bugs": "https://github.com/brunomolteni/viaje-terrenal/issues",
   "dependencies": {
+    "instafeed.js": "^1.4.1",
     "reshape-standard": "^3.1.1",
     "spike": "1.3.1",
     "spike-contentful": "^2.0.1",
