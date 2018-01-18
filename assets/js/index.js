@@ -18,7 +18,9 @@ var AnimatedTransition = Barba.BaseTransition.extend({
       if( !e.target.classList.contains('done') )this.done();
       e.target.classList.add('done');
       FB.XFBML.parse(document.getElementById('barba-wrapper'));
-      if( document.getElementById('instafeed') ) feed.run();
+
+      feedEl = document.getElementById('instafeed');
+      if( feedEl && !feedEl.hasChildNodes() ) feed.run();
     });
   },
 });
@@ -39,7 +41,9 @@ var feed = new insta({
         limit: 9,
     });
 
-if( document.getElementById('instafeed') ) feed.run();
+var feedEl = document.getElementById('instafeed');
+
+if( feedEl && !feedEl.hasChildNodes() ) feed.run();
 
 // Facebook comments
 
