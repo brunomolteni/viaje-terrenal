@@ -35,8 +35,12 @@
         });
         ga('require', 'urlChangeTracker');
         ga('require', 'outboundLinkTracker');
-        ga('require', 'pageVisibilityTracker');
-        ga('require', 'maxScrollTracker');
+        ga('require', 'pageVisibilityTracker', {
+          visibleMetricIndex: 2,
+        });
+        ga('require', 'maxScrollTracker', {
+          maxScrollMetricIndex: 1,
+        });
         ga('send', 'pageview');
       </script>
       <script async src='https://www.google-analytics.com/analytics.js'></script>
