@@ -29,7 +29,12 @@
       <script>
         window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
         ga('create', 'UA-107272968-1', 'auto');
+        ga('require', 'cleanUrlTracker', {
+          stripQuery: true,
+          trailingSlash: 'remove'
+        });
         ga('require', 'urlChangeTracker');
+        ga('require', 'outboundLinkTracker');
         ga('require', 'pageVisibilityTracker');
         ga('require', 'maxScrollTracker');
         ga('send', 'pageview');
