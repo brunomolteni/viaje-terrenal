@@ -75,7 +75,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 1em 0;
+    margin: 2em 0;
     width: 125%;
     margin-left: -12.5%;
   }
@@ -83,6 +83,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0;
   }
   .post .copy .col img, .post .copy .two-one img, .post .copy .one-two img{
     flex: 0 1 auto;
