@@ -3,6 +3,7 @@ const Records = require('spike-records');
 const htmlStandards = require('reshape-standard');
 const cssStandards = require('spike-css-standards');
 const jsStandards = require('spike-js-standards');
+const markdownContainer = require('markdown-it-container');
 const imgPlugin = require('./_imgsPlugin');
 const {getConfigForKeys, getPostsWithImagesAndDate} = require('./config.js');
 const env = process.env.NODE_ENV;
@@ -11,7 +12,7 @@ const c = getConfigForKeys([
   'CTF_SPACE_ID',
   'CTF_CDA_ACCESS_TOKEN',
 ]);
-const locals = {production: env === 'production'};
+const locals = {production: env === 'production', test};
 
 module.exports = {
   devtool: 'source-map',
@@ -35,7 +36,8 @@ module.exports = {
     locals: locals,
     minify: env === 'production',
     appendPlugins: imgPlugin,
-    markdown: { typographer: false, linkify: true },
+    markdown: { typographer: false, linkify: true, html: true },
+    markdownPlugins: [[markdownContainer, 'col'],[markdownContainer, 'small'],[markdownContainer, 'two-one'],[markdownContainer, 'one-two']],
     retext: [],
   }),
   postcss: cssStandards({

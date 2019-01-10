@@ -71,7 +71,7 @@
 }
 
 @media all and (min-width: 800px){
-  .post .copy .col{
+  .post .copy .col, .post .copy .two-one ,.post .copy .one-two{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -79,25 +79,33 @@
     width: 125%;
     margin-left: -12.5%;
   }
-  .post .copy .col img{
+  .post .copy .col p:only-child, .post .copy .two-one p:only-child, .post .copy .one-two p:only-child{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .post .copy .col img, .post .copy .two-one img, .post .copy .one-two img{
     flex: 0 1 auto;
     width: 48%;
     width:  calc(50% - 1em);
     margin: 0;
   }
-  .post .copy .col.two-one img:first-child, .post .copy .col.one-two img:last-child{
+  .post .copy .col img:only-child, .post .copy .two-one img:only-child, .post .copy .one-two img:only-child{
+    width: 100%;
+  }
+  .post .copy .two-one img:first-child, .post .copy .one-two img:last-child{
     width: 61.5%;
     width: calc(63.5% - 1em);
   }
-  .post .copy .col.two-one img:last-child, .post .copy .col.one-two img:first-child{
+  .post .copy .two-one img:last-child, .post .copy .one-two img:first-child{
     width: 34.5%;
     width: calc(36.5% - 1em);
   }
-  .post .copy .col p:first-child {
+  .post .copy .col p:first-child:not(:only-child) {
     padding-left: 10%;
     padding-right: 2em;
   }
-  .post .copy .col p:last-child {
+  .post .copy .col p:last-child:not(:only-child) {
     padding-right: 10%;
     padding-left: 2em;
   }
