@@ -104,10 +104,12 @@
   .post .copy .col p:first-child:not(:only-child) {
     padding-left: 10%;
     padding-right: 2em;
+    max-width: 50%;
   }
   .post .copy .col p:last-child:not(:only-child) {
     padding-right: 10%;
     padding-left: 2em;
+    max-width: 50%;
   }
 
   .post .copy .small img {
