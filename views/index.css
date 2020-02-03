@@ -1,7 +1,7 @@
 .home header{
   background-image: linear-gradient(to bottom, white , transparent 90% ), url(img/P6111010bw2.jpg);
   background-size: cover;
-  background-position: center top;
+  background-position: center;
   background-repeat: no-repeat;
   padding: 40px 20px;
   height: 100vh;
